@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/BombBake.png-25ac4d0c1a1d2b20578893b261a885a5.stex"
+
+[deps]
+
+source_file="res://For import/BombBake.png"
+dest_files=[ "res://.import/BombBake.png-25ac4d0c1a1d2b20578893b261a885a5.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

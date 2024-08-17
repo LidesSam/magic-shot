@@ -1,0 +1,847 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Objetos/Scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Objetos/sprites/Sky 258.png" type="Texture" id=2]
+[ext_resource path="res://Themes/MenuTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Themes/Fonts/arcadeclassic/ARCADECLASSIC.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://Objetos/Scripts/Config.gd" type="Script" id=5]
+[ext_resource path="res://Themes/Fonts/ka1.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Themes/Fonts/MenuDinamicOutlineFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Scenas/Help.gd" type="Script" id=8]
+[ext_resource path="res://Objetos/Texturas/Help Menu1.png" type="Texture" id=9]
+[ext_resource path="res://Objetos/Texturas/HelpMenu2Pc.png" type="Texture" id=10]
+[ext_resource path="res://Objetos/Texturas/HelpMenu2Android.png" type="Texture" id=11]
+[ext_resource path="res://Themes/ArcadeTheme.tres" type="Theme" id=12]
+[ext_resource path="res://Objetos/Music/Wagon Wheel - Electronic.wav" type="AudioStream" id=13]
+[ext_resource path="res://Objetos/Scripts/MusicLoop.gd" type="Script" id=14]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 256, 256 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+_sections_unfolded = [ "Axis Stretch", "Modulate" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 96
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 24
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[node name="Menu" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Panel" type="Panel" parent="NinePatchRect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = SubResource( 1 )
+_sections_unfolded = [ "Focus", "Size Flags", "Theme", "custom_styles" ]
+
+[node name="Main" type="VBoxContainer" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = 32.0
+margin_right = 300.0
+margin_bottom = -32.0
+rect_min_size = Vector2( 600, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags" ]
+
+[node name="Label" type="Label" parent="Main" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 600.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.820313, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.722656, 0.382191, 0.0197601, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = -2
+text = "Magic Shot"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="EndlessBtn" type="Button" parent="Main" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 204.0
+margin_right = 600.0
+margin_bottom = 312.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Play Classic"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_styles" ]
+
+[node name="BombmodeBtn" type="Button" parent="Main" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 288.0
+margin_right = 600.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "CandyBomb"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="HelpBtn" type="Button" parent="Main" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 316.0
+margin_right = 600.0
+margin_bottom = 424.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Help"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="ConfigBtn" type="Button" parent="Main" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 428.0
+margin_right = 600.0
+margin_bottom = 536.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Config"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Config" type="Control" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -293.0
+margin_top = -234.0
+margin_right = 292.0
+margin_bottom = 297.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Size Flags" ]
+
+[node name="contextual_help" type="Label" parent="Config" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -212.0
+margin_top = -57.0
+margin_right = 210.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 3 )
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_fonts" ]
+
+[node name="cnfg_Left" type="Control" parent="Config" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 22.0
+margin_right = 585.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Button" type="Button" parent="Config/cnfg_Left" index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = -30.0
+margin_right = -20.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Label" type="Label" parent="Config/cnfg_Left" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -20.0
+margin_right = 126.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 7 )
+text = "Left"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="cnfg_Right" type="Control" parent="Config" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 134.0
+margin_right = 585.0
+margin_bottom = 242.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Button" type="Button" parent="Config/cnfg_Right" index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -147.0
+margin_top = -30.0
+margin_right = -19.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Label" type="Label" parent="Config/cnfg_Right" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -19.0
+margin_right = 122.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 7 )
+text = "Right"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="cnfg_Action" type="Control" parent="Config" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 246.0
+margin_right = 585.0
+margin_bottom = 354.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Button" type="Button" parent="Config/cnfg_Action" index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -147.0
+margin_top = -30.0
+margin_right = -19.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Label" type="Label" parent="Config/cnfg_Action" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -20.0
+margin_right = 115.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 7 )
+text = "Shot"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="cnfg_Cancel" type="Control" parent="Config" index="4"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 288.0
+margin_right = 585.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Button" type="Button" parent="Config/cnfg_Cancel" index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -147.0
+margin_top = -31.0
+margin_right = -19.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Label" type="Label" parent="Config/cnfg_Cancel" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -20.0
+margin_right = 115.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 7 )
+text = "Back"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="cnfg_pause" type="Control" parent="Config" index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 358.0
+margin_right = 585.0
+margin_bottom = 468.0
+rect_min_size = Vector2( 0, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Button" type="Button" parent="Config/cnfg_pause" index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -147.0
+margin_top = -31.5
+margin_right = -19.0
+margin_bottom = 32.5
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+
+[node name="Label" type="Label" parent="Config/cnfg_pause" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -20.0
+margin_right = 132.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 7 )
+text = "Pause"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Help" type="NinePatchRect" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 8 )
+_sections_unfolded = [ "Rect" ]
+h1texture = ExtResource( 9 )
+h2texture = ExtResource( 10 )
+h2Atexture = ExtResource( 11 )
+
+[node name="HelpRect" type="TextureRect" parent="Help" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 97.0
+margin_top = 53.0
+margin_right = 927.0
+margin_bottom = 541.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+expand = true
+stretch_mode = 0
+
+[node name="ButtonR" type="Button" parent="Help" index="1"]
+
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = -64.0
+rect_min_size = Vector2( 300, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Next Help"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Textures", "Theme" ]
+
+[node name="ButtonL" type="Button" parent="Help" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 60.0
+margin_right = 96.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 96, 200 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="BackButton" type="Button" parent="." index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_top = -78.0
+margin_right = 126.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+_sections_unfolded = [ "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="Loading" type="Panel" parent="." index="5"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 200.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+_sections_unfolded = [ "Margin", "Mouse", "Rect", "Theme" ]
+
+[node name="Label" type="Label" parent="Loading" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -52.5
+margin_top = -16.5
+margin_right = 52.5
+margin_bottom = 16.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 12 )
+text = "Loading"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 13 )
+volume_db = -12.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+script = ExtResource( 14 )
+
+[connection signal="pressed" from="Main/EndlessBtn" to="." method="_on_EndlessBtn_pressed"]
+
+[connection signal="pressed" from="Main/BombmodeBtn" to="." method="_on_EndlessBtn_pressed"]
+
+[connection signal="pressed" from="Main/HelpBtn" to="." method="_on_HelpBtn_pressed"]
+
+[connection signal="pressed" from="Main/ConfigBtn" to="." method="_on_ConfigButton_pressed"]
+
+[connection signal="pressed" from="Help/ButtonR" to="Help" method="_on_ButtonR_pressed"]
+
+[connection signal="pressed" from="Help/ButtonL" to="Help" method="_on_ButtonL_pressed"]
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+
+

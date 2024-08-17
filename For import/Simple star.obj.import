@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Simple star.obj-891fcd9941a9b816154d11eb2e63258f.mesh"
+
+[deps]
+
+files=[ "res://.import/Simple star.obj-891fcd9941a9b816154d11eb2e63258f.mesh" ]
+
+source_file="res://For import/Simple star.obj"
+dest_files=[ "res://.import/Simple star.obj-891fcd9941a9b816154d11eb2e63258f.mesh", "res://.import/Simple star.obj-891fcd9941a9b816154d11eb2e63258f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

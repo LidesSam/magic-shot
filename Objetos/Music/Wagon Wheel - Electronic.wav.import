@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wagon Wheel - Electronic.wav-882f11034373610b8b4e92e42fa25787.sample"
+
+[deps]
+
+source_file="res://Objetos/Music/Wagon Wheel - Electronic.wav"
+dest_files=[ "res://.import/Wagon Wheel - Electronic.wav-882f11034373610b8b4e92e42fa25787.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

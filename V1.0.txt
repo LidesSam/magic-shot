@@ -1,0 +1,6 @@
+modo principal funcional
+efectos de sonido 
+musica
+
+Falta de optimizasion en celulares (corre lento)
+carga mal la textura de los "targets" 

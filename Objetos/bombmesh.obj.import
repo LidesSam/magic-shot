@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bombmesh.obj-ba88d0211fdaa09c1b07fb32db331bb2.mesh"
+
+[deps]
+
+files=[ "res://.import/bombmesh.obj-ba88d0211fdaa09c1b07fb32db331bb2.mesh" ]
+
+source_file="res://Objetos/bombmesh.obj"
+dest_files=[ "res://.import/bombmesh.obj-ba88d0211fdaa09c1b07fb32db331bb2.mesh", "res://.import/bombmesh.obj-ba88d0211fdaa09c1b07fb32db331bb2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
